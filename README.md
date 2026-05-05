@@ -2,6 +2,7 @@
 # José F. Aguilar Madeira
 
 **Coordinator Professor (with Habilitation in Mathematics)** · Department of Mathematics, ISEL — Polytechnic Institute of Lisbon
+
 **Integrated Researcher** · IDMEC / LAETA, Instituto Superior Técnico, Universidade de Lisboa
 
 Research in **Optimization and Decision Sciences**: derivative-free optimization, multiobjective optimization, global and local direct-search methods, and applied operations research developed in partnership with industry.

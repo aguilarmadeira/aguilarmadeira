@@ -18,9 +18,13 @@ Research in **Optimization and Decision Sciences**: derivative-free optimization
 | **MultiGLODS** | Multiobjective extension of GLODS | Custódio & Madeira, 2018 |
 | **GLODS-SI** — Scale-Invariant variant for engineering design optimization | Companion code: [`GLODS_SI`](https://github.com/aguilarmadeira/GLODS_SI) | Madeira, *Journal of Computational Design and Engineering*, in press (JCDE-2026-065) |
 
-**Theoretical work (under review)**
+## Recent theoretical and algorithmic work
 
-Mixed-variable optimisation as a metric product space, with transient categorical geometry and a hierarchy of local optimality — companion repository: [`mixed-spaces-supplementary`](https://github.com/aguilarmadeira/mixed-spaces-supplementary). Preprint on [Zenodo](https://zenodo.org/records/18704776).
+A two-part contribution on mixed-variable optimisation, in which the structural and algorithmic components reference one another:
+
+- **Structural foundation** — *Mixed-Variable Optimisation as a Metric Product Space: Transient Categorical Geometry and a Hierarchy of Local Optimality*. Manuscript under review. Preprint: [Zenodo](https://zenodo.org/records/18704776). Companion code: [`mixed-spaces-supplementary`](https://github.com/aguilarmadeira/mixed-spaces-supplementary).
+- **Algorithmic instantiation** — *Deterministic Neighborhood Rotation (DNR) for Categorical Variables in Derivative-Free Optimization*. Working paper. Preprint: [Zenodo](https://zenodo.org/records/19257923). Code release planned upon acceptance for publication.
+
 
 **Companion repositories**
 

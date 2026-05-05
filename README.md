@@ -63,4 +63,3 @@ h-index 25 · 2,100+ citations · Two PhDs (Mathematics, IST 2019; Mechanical En
 
 ISEL · Rua Conselheiro Emídio Navarro 1, 1959-007 Lisboa, Portugal · `jose.madeira (at) isel.pt`
 IDMEC · Av. Rovisco Pais 1, 1049-001 Lisboa, Portugal · `aguilarmadeira (at) tecnico.ulisboa.pt`
---- END README.md ---

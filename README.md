@@ -1,4 +1,4 @@
---- BEGIN README.md ---
+
 # José F. Aguilar Madeira
 
 **Coordinator Professor (with Habilitation in Mathematics)** · Department of Mathematics, ISEL — Polytechnic Institute of Lisbon

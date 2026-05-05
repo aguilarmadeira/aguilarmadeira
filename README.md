@@ -1,16 +1,3 @@
-# 02 — Profile README
-
-**Where:**
-1. Create a **new public repository** named exactly `aguilarmadeira` (same as your username — this is the trigger that makes its README appear at the top of your profile page).
-2. When prompted, choose **Initialize this repository with a README**.
-3. After creation, edit `README.md` and replace its content with the block below (everything inside the fenced section).
-4. Commit the change. The README will then render automatically at the top of `github.com/aguilarmadeira`.
-
-> ℹ️ **Important:** copy *only* what is inside the `--- BEGIN ---` / `--- END ---` markers. Do NOT include the markers themselves.
-
----
-
-```
 --- BEGIN README.md ---
 # José F. Aguilar Madeira
 
@@ -77,11 +64,3 @@ h-index 25 · 2,100+ citations · Two PhDs (Mathematics, IST 2019; Mechanical En
 ISEL · Rua Conselheiro Emídio Navarro 1, 1959-007 Lisboa, Portugal · `jose.madeira (at) isel.pt`
 IDMEC · Av. Rovisco Pais 1, 1049-001 Lisboa, Portugal · `aguilarmadeira (at) tecnico.ulisboa.pt`
 --- END README.md ---
-```
-
----
-
-## Notes
-
-- The Profile README I integrated a small mention of the **mixed-spaces-supplementary** theoretical work right after the Published Algorithms table. If you prefer a more minimalist Profile README focused only on classical published algorithms, tell me and I will remove it.
-- After committing, give the page 30 seconds and refresh `github.com/aguilarmadeira`. The README will render at the top, above the pinned repositories.

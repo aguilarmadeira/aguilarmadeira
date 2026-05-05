@@ -15,7 +15,7 @@ Research in **Optimization and Decision Sciences**: derivative-free optimization
 | --- | --- | --- |
 | **DMS** — Direct MultiSearch | Local multiobjective optimization without derivatives | Custódio, Madeira, Vaz & Vicente, 2011 |
 | **GLODS** — Global and Local Optimization using Direct Search | Single-objective global optimization | Custódio & Madeira, *Journal of Global Optimization*, 2015 |
-| **MultiGLODS** | Multiobjective extension of GLODS | Custódio & Madeira, 2018 |
+| **MultiGLODS** | Global multiobjective optimization without derivatives | Custódio & Madeira, 2018 |
 | **GLODS-SI** — Scale-Invariant variant for engineering design optimization | Companion code: [`GLODS_SI`](https://github.com/aguilarmadeira/GLODS_SI) | Madeira, *Journal of Computational Design and Engineering*, in press (JCDE-2026-065) |
 
 ## Recent theoretical and algorithmic work

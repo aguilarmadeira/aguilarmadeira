@@ -1,4 +1,3 @@
-
 # José F. Aguilar Madeira
 
 **Coordinator Professor (with Habilitation in Mathematics)** · Department of Mathematics, ISEL — Polytechnic Institute of Lisbon
@@ -16,7 +15,7 @@ Research in **Optimization and Decision Sciences**: derivative-free optimization
 | **DMS** — Direct MultiSearch | Local multiobjective optimization without derivatives | Custódio, Madeira, Vaz & Vicente, 2011 |
 | **GLODS** — Global and Local Optimization using Direct Search | Single-objective global optimization | Custódio & Madeira, *Journal of Global Optimization*, 2015 |
 | **MultiGLODS** | Global multiobjective optimization without derivatives | Custódio & Madeira, 2018 |
-| **GLODS-SI** — Scale-Invariant variant for engineering design optimization | Companion code: [`GLODS_SI`](https://github.com/aguilarmadeira/GLODS_SI) | Madeira, *Journal of Computational Design and Engineering*, in press (JCDE-2026-065) |
+| **GLODS-SI** — Scale-Invariant variant for engineering design optimization | Companion code: [`GLODS_SI`](https://github.com/aguilarmadeira/GLODS_SI) | Madeira, *Journal of Computational Design and Engineering* (2026), Open Access — DOI [10.1093/jcde/qwag049](https://doi.org/10.1093/jcde/qwag049) |
 
 ## Recent theoretical and algorithmic work
 
@@ -29,9 +28,24 @@ A two-part contribution on mixed-variable optimisation, in which the structural 
 **Companion repositories**
 
 - [`GLODS_SI`](https://github.com/aguilarmadeira/GLODS_SI) — implementation and reproducibility artefacts for GLODS-SI
-- [`MOO_Prob_Matlab`](https://github.com/aguilarmadeira/MOO_Prob_Matlab) — 108 multiobjective test problems with seven scaling strategies
-- [`DFO_Benchmark_Suite`](https://github.com/aguilarmadeira/DFO_Benchmark_Suite) — 504 self-contained MATLAB wrappers across 63 instances for benchmarking derivative-free methods
+- [`MOO_Prob_Matlab`](https://github.com/aguilarmadeira/MOO_Prob_Matlab) — multiobjective benchmark test problems over continuous and mixed-variable decision spaces under controlled scale heterogeneity
+- [`DFO_Benchmark_Suite`](https://github.com/aguilarmadeira/DFO_Benchmark_Suite) — single-objective derivative-free benchmark over continuous and mixed-variable decision spaces under controlled scale heterogeneity
 - [`mixed-spaces-supplementary`](https://github.com/aguilarmadeira/mixed-spaces-supplementary) — supplementary code for a manuscript on mixed-variable optimisation as a metric product space
+
+---
+
+## Benchmark test-problem collections
+
+Open, self-contained MATLAB test problems for benchmarking derivative-free solvers under controlled **scale heterogeneity**, across single- and multi-objective settings and continuous / mixed-variable decision spaces. Each collection instantiates its base problems under **8 deterministic heterogeneity strategies**.
+
+| Setting | Variables | Base problems | Instances (× 8 strategies) | Repository |
+| --- | --- | --- | --- | --- |
+| Single-objective | Continuous | 63 | 504 | [`DFO_Benchmark_Suite`](https://github.com/aguilarmadeira/DFO_Benchmark_Suite) |
+| Single-objective | Mixed (C/D/K) | 63 | 504 | [`DFO_Benchmark_Suite`](https://github.com/aguilarmadeira/DFO_Benchmark_Suite) |
+| Multi-objective | Continuous | 108 | 864 | [`MOO_Prob_Matlab`](https://github.com/aguilarmadeira/MOO_Prob_Matlab) |
+| Multi-objective | Mixed (C/D/K) | 108 | 864 | [`MOO_Prob_Matlab`](https://github.com/aguilarmadeira/MOO_Prob_Matlab) |
+
+<sub>The eight strategy families are shared across all collections. The `sobol_digit_oscillatory` contrast is κ = 1e8 in the single-objective suite and κ = 1e6 in the multi-objective suite, matching the settings used in the respective studies.</sub>
 
 ---
 

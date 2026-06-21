@@ -1,6 +1,10 @@
 # GLODS-SI
 
+<<<<<<< HEAD
 **Scale-Invariant Global-Local Direct Search for Engineering Design Optimization**
+=======
+**Associate Professor (with Habilitation in Mathematics)** · Department of Mathematics, ISEL — Polytechnic Institute of Lisbon
+>>>>>>> 7697f6748ac98e65e3204a56272cf379ed5af97b
 
 [![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
 [![DOI](https://img.shields.io/badge/DOI-10.1093%2Fjcde%2Fqwag049-blue.svg)](https://doi.org/10.1093/jcde/qwag049)

@@ -1,243 +1,89 @@
-# GLODS-SI
+# José F. Aguilar Madeira
 
-<<<<<<< HEAD
-**Scale-Invariant Global-Local Direct Search for Engineering Design Optimization**
-=======
 **Associate Professor (with Habilitation in Mathematics)** · Department of Mathematics, ISEL — Polytechnic Institute of Lisbon
->>>>>>> 7697f6748ac98e65e3204a56272cf379ed5af97b
 
-[![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
-[![DOI](https://img.shields.io/badge/DOI-10.1093%2Fjcde%2Fqwag049-blue.svg)](https://doi.org/10.1093/jcde/qwag049)
+**Integrated Researcher** · IDMEC / LAETA, Instituto Superior Técnico, Universidade de Lisboa
 
-GLODS-SI is a derivative-free direct-search method for bound-constrained
-global optimization problems whose decision variables span widely
-different physical scales. It extends the original GLODS framework
-(Custódio & Madeira, 2015) by performing all geometric operations —
-polling, distance computation, point merging — in normalized coordinates
-`y ∈ [0, 1]^n`, while objective evaluations remain in the original
-variable space `x ∈ [ℓ, u]`. This *two-space formulation* makes the
-method's behaviour invariant to the units chosen for each variable and
-robust to heterogeneous variable scales.
-
-This repository contains the reference MATLAB implementation that
-accompanies the paper:
-
-> J. F. A. Madeira,
-> *GLODS-SI: Scale-Invariant Global-Local Direct Search for Engineering
-> Design Optimization*,
-> Journal of Computational Design and Engineering, 2026, qwag049.
-> Open Access — DOI: [10.1093/jcde/qwag049](https://doi.org/10.1093/jcde/qwag049).
-
-The numerical results that produced Tables 3 and Figures 3–6 of the
-paper are provided as final artifacts in [`results/`](results/).
+Research in **Optimization and Decision Sciences**: derivative-free optimization, multiobjective optimization, global and local direct-search methods, and applied operations research developed in partnership with industry.
 
 ---
 
-## Repository contents
+## Published Algorithms
 
-```
-GLODS_SI/
-├── README.md                  (this file)
-├── LICENSE                    (GNU LGPL v3)
-├── CITATION.cff               (citation metadata)
-├── glods_si.m                 (main solver)
-├── parameters_glods_si.m      (default parameters; matches paper Section 4)
-├── driver_glods_si.m          (example driver)
-├── aluffi_pentini_2D.m        (illustrative test problem, 2D)
-└── results/                   (numerical results that produced the paper's
-                               tables and figures; see results/README.md)
-```
+| Method | Description | Reference |
+| --- | --- | --- |
+| **DMS** — Direct MultiSearch | Local multiobjective optimization without derivatives | Custódio, Madeira, Vaz & Vicente, 2011 |
+| **GLODS** — Global and Local Optimization using Direct Search | Single-objective global optimization | Custódio & Madeira, *Journal of Global Optimization*, 2015 |
+| **MultiGLODS** | Global multiobjective optimization without derivatives | Custódio & Madeira, 2018 |
+| **GLODS-SI** — Scale-Invariant variant for engineering design optimization | Companion code: [`GLODS_SI`](https://github.com/aguilarmadeira/GLODS_SI) | Madeira, *Journal of Computational Design and Engineering* (2026), Open Access — DOI [10.1093/jcde/qwag049](https://doi.org/10.1093/jcde/qwag049) |
 
----
+## Recent theoretical and algorithmic work
 
-## Installation
+A two-part contribution on mixed-variable optimisation, in which the structural and algorithmic components reference one another:
 
-Requirements: MATLAB R2018b or later (no toolboxes required).
+- **Structural foundation** — *Mixed-Variable Optimisation as a Metric Product Space: Transient Categorical Geometry and a Hierarchy of Local Optimality*. Manuscript under review. Preprint: [Zenodo](https://zenodo.org/records/18704776). Companion code: [`mixed-spaces-supplementary`](https://github.com/aguilarmadeira/mixed-spaces-supplementary).
+- **Algorithmic instantiation** — *Deterministic Neighborhood Rotation (DNR) for Categorical Variables in Derivative-Free Optimization*. Working paper. Preprint: [Zenodo](https://zenodo.org/records/19257923). Code release planned upon acceptance for publication.
 
-1. Clone or download this repository.
-2. Add the repository folder to your MATLAB path:
-   ```matlab
-   addpath('path/to/GLODS_SI');
-   ```
 
-That's it.
+**Companion repositories**
+
+- [`GLODS_SI`](https://github.com/aguilarmadeira/GLODS_SI) — implementation and reproducibility artefacts for GLODS-SI
+- [`MOO_Prob_Matlab`](https://github.com/aguilarmadeira/MOO_Prob_Matlab) — multiobjective benchmark test problems over continuous and mixed-variable decision spaces under controlled scale heterogeneity · DOI [10.5281/zenodo.20783713](https://doi.org/10.5281/zenodo.20783713)
+- [`DFO_Benchmark_Suite`](https://github.com/aguilarmadeira/DFO_Benchmark_Suite) — single-objective derivative-free benchmark over continuous and mixed-variable decision spaces under controlled scale heterogeneity · DOI [10.5281/zenodo.20782892](https://doi.org/10.5281/zenodo.20782892)
+- [`mixed-spaces-supplementary`](https://github.com/aguilarmadeira/mixed-spaces-supplementary) — supplementary code for a manuscript on mixed-variable optimisation as a metric product space
 
 ---
 
-## Quick start
+## Benchmark test-problem collections
 
-Run the bundled demo on the 2D Aluffi-Pentini problem:
+Open, self-contained MATLAB test problems for benchmarking derivative-free solvers under controlled **scale heterogeneity**, across single- and multi-objective settings and continuous / mixed-variable decision spaces. Each collection instantiates its base problems under **8 deterministic heterogeneity strategies**.
 
-```matlab
-cd GLODS_SI
-driver_glods_si
-```
+| Setting | Variables | Base problems | Instances (× 8 strategies) | Repository |
+| --- | --- | --- | --- | --- |
+| Single-objective | Continuous | 63 | 504 | [`DFO_Benchmark_Suite`](https://github.com/aguilarmadeira/DFO_Benchmark_Suite) |
+| Single-objective | Mixed (C/D/K) | 63 | 504 | [`DFO_Benchmark_Suite`](https://github.com/aguilarmadeira/DFO_Benchmark_Suite) |
+| Multi-objective | Continuous | 108 | 864 | [`MOO_Prob_Matlab`](https://github.com/aguilarmadeira/MOO_Prob_Matlab) |
+| Multi-objective | Mixed (C/D/K) | 108 | 864 | [`MOO_Prob_Matlab`](https://github.com/aguilarmadeira/MOO_Prob_Matlab) |
+| Multi-objective — base set¹ | Continuous | 108 | — (unscaled) | [`MOO_Prob_Matlab`](https://github.com/aguilarmadeira/MOO_Prob_Matlab) |
 
-The driver runs GLODS-SI with the default parameters listed in
-`parameters_glods_si.m` and reports:
+<sub>The eight strategy families are shared across all collections. The `sobol_digit_oscillatory` contrast is κ = 1e8 in the single-objective suite and κ = 1e6 in the multi-objective suite, matching the settings used in the respective studies.</sub>
 
-- objective value reached;
-- best point in work-space coordinates;
-- total number of function evaluations;
-- a convergence profile (best-so-far value vs. function evaluations).
+<sub>¹ Base set: MATLAB conversions of the original Direct MultiSearch (DMS) problems, originally distributed in AMPL — the reference set (`problems/`) from which the multi-objective collections above are derived.</sub>
 
-Aluffi-Pentini is a 2D problem with a single global minimum at
-`x* = (-1.0465, 0)` and `f* = -0.3523`, plus two local minima.
-GLODS-SI typically reaches the global minimum within a few hundred
-function evaluations.
+<sub>Archived and citable on Zenodo — `DFO_Benchmark_Suite`: DOI [10.5281/zenodo.20782892](https://doi.org/10.5281/zenodo.20782892) · `MOO_Prob_Matlab`: DOI [10.5281/zenodo.20783713](https://doi.org/10.5281/zenodo.20783713).</sub>
 
 ---
 
-## Using GLODS-SI on your own problem
+## Research Interests
 
-GLODS-SI expects:
-
-- a function handle `@my_objective` that accepts a column vector
-  `x ∈ R^n` and returns a scalar `f`;
-- bound vectors `lb`, `ub` of size `n × 1`.
-
-The solver is then called as:
-
-```matlab
-[profile, Plist, flist, alfa, radius, fevals] = ...
-    glods_si(@my_objective, [], [], lb, ub);
-```
-
-Outputs:
-
-| Output     | Meaning                                                    |
-|------------|------------------------------------------------------------|
-| `profile`  | Best-so-far objective value vs. function evaluations       |
-| `Plist`    | Final list of points returned by the solver                |
-| `flist`    | Objective values at the points in `Plist`                  |
-| `alfa`     | Final step sizes (one per point in `Plist`)                |
-| `radius`   | Final comparison radii                                     |
-| `fevals`   | Total number of function evaluations performed             |
-
-For benchmarking against the test suite used in the paper, see the
-companion repository
-[DFO_Benchmark_Suite](https://github.com/aguilarmadeira/DFO_Benchmark_Suite),
-which provides 504 self-contained wrappers (63 instances × 8 scaling
-strategies) ready to be passed as the first argument to `glods_si`.
+Derivative-free optimization · Multiobjective optimization · Direct-search methods · Decision Sciences and operations research · Industrial applications in transit operations, vehicle routing, postal logistics and energy systems
 
 ---
 
-## Default parameters
+## Profiles and Affiliations
 
-The default values in `parameters_glods_si.m` match the convention used
-in the experimental section of the paper (Section 4):
+[ORCID 0000-0001-9523-3808](https://orcid.org/0000-0001-9523-3808) · [CiênciaVitae 6F1E-DCF0-D6EC](https://www.cienciavitae.pt/6F1E-DCF0-D6EC) · [ResearcherID N-6918-2016](https://www.webofscience.com/wos/author/record/N-6918-2016) · [Scopus 7003405549](https://www.scopus.com/authid/detail.uri?authorId=7003405549) · [Personal page](https://web.tecnico.ulisboa.pt/aguilarmadeira/)
 
-| Parameter           | Value     | Meaning                                 |
-|---------------------|-----------|-----------------------------------------|
-| `alfa_ini`          | 0.1       | Initial step size in normalized space   |
-| `radius_ini`        | 0.2       | Initial comparison radius (= 2·`alfa_ini`)|
-| `tol_stop`          | 1e-5      | Stopping tolerance                      |
-| `max_fevals`        | 20000     | Maximum number of function evaluations  |
-| `nPini`             | 30        | Number of initial sample points         |
-| `list`              | 6         | Initialization: Sobol sequences         |
-| `suf_decrease`      | 0         | Integer-lattice sufficient decrease     |
-| `cache`             | 1         | Cache previously evaluated points       |
-
-Two changes relative to the original GLODS defaults are worth noting:
-
-- `alfa_ini` and `radius_ini` are *dimensionless* (fractions of each
-  variable range), since geometric operations occur in `[0, 1]^n`.
-- `radius_ini = 2 · alfa_ini = 0.2` is the convention used to generate
-  Table 3 of the paper. It satisfies `r_0 ≥ d_max · alfa_ini` (with
-  `d_max = 1` for the positive basis `[I -I]`), preventing nearby
-  initial points from being merged immediately and favouring
-  exploration of the global structure.
+[IDMEC](https://www.idmec.tecnico.ulisboa.pt/) · [ISEL — Department of Mathematics](https://www.isel.pt/)
 
 ---
 
-## Numerical results
+## Indicators
 
-The [`results/`](results/) folder contains the numerical results that
-produced the tables and figures of the accompanying paper, organized
-into three sub-folders:
-
-### Main comparison (3-way)
-
-[`results/GLODS_vs_NOMAD_vs_GLODSSI/`](results/GLODS_vs_NOMAD_vs_GLODSSI/)
-contains the joint 3-algorithm data profiles, including the figures
-used in the manuscript:
-
-- **Figure 3** — baseline scaling (κ = 1)
-- **Figure 4** — extreme scaling (κ = 10⁸)
-- **Figure 5** — Halton oscillatory scaling (κ = 10⁶)
-- **Figure 6** — spatial–thermal scaling (κ ≈ 9 × 10⁴)
-
-Profiles for the four scaling strategies not shown in the paper are
-also provided, together with the auto-generated LaTeX summary table.
-
-### Pairwise comparisons
-
-- [`results/GLODS_vs_GLODSSI/`](results/GLODS_vs_GLODSSI/) — source of
-  the GLODS and GLODS-SI columns of Table 3.
-- [`results/NOMAD_vs_GLODSSI/`](results/NOMAD_vs_GLODSSI/) — source of
-  the NOMAD column of Table 3.
-
-Each sub-folder contains, for the eight scaling strategies considered
-in the paper: PDF data profiles, ASCII summary tables, and the
-auto-generated LaTeX success-rate tables. See
-[`results/README.md`](results/README.md) for the full description.
-
-These files are final artifacts and can be inspected directly without
-rerunning the experiments.
+h-index 22 · 1,363 citations (Web of Science) · Two PhDs (Mathematics, IST 2019; Mechanical Engineering, IST 2004) · Habilitation in Mathematics (Universidade de Évora, 2021)
 
 ---
 
-## License
+## Selected Awards
 
-This software is distributed under the **GNU Lesser General Public
-License version 3** (LGPL-3.0-or-later). This license is inherited
-from the original GLODS framework (Custódio & Madeira, 2015), on which
-GLODS-SI is based.
-
-See [`LICENSE`](LICENSE) for the full license text.
-
----
-
-## Citation
-
-If you use GLODS-SI in academic work, please cite the accompanying paper:
-
-```bibtex
-@article{Madeira2026GLODSSI,
-  author  = {Madeira, J. F. A.},
-  title   = {{GLODS-SI}: Scale-Invariant {Global--Local} Direct Search
-             for Engineering Design Optimization},
-  journal = {Journal of Computational Design and Engineering},
-  year    = {2026},
-  doi     = {10.1093/jcde/qwag049},
-  note    = {Article qwag049, Open Access}
-}
-```
-
-A `CITATION.cff` file is also provided for tools that consume that
-metadata format (GitHub, Zenodo, etc.).
-
-### Underlying framework
-
-> Custódio, A. L., Madeira, J. F. A. (2015).
-> *GLODS: Global and Local Optimization using Direct Search.*
-> Journal of Global Optimization, 62, 1–28.
-> [doi:10.1007/s10898-014-0224-9](https://doi.org/10.1007/s10898-014-0224-9)
-
----
-
-## Acknowledgments
-
-This work was supported by *Fundação para a Ciência e a Tecnologia*
-(FCT) through LAETA (project
-[UID/50022/2025](https://doi.org/10.54499/UID/50022/2025)).
+- **2023** — IPL / CGD Scientific Excellence Award (Technologies and Engineering, triennium 2020–2022)
+- **2021** — IPL / CGD Award for Recognition of Activities with Community Relevance (triennium 2018–2020)
+- **2019–2022** — Four IPL / CGD merit diplomas for scientific work in Technologies and Engineering
+- **2004–2021** — *Excelente* (highest rating) in 18 consecutive ISEL teaching evaluations
 
 ---
 
 ## Contact
 
-**J. F. A. Madeira**
-IDMEC, Instituto Superior Técnico, Universidade de Lisboa
-ISEL, Instituto Politécnico de Lisboa
-Email: aguilarmadeira@tecnico.ulisboa.pt
-ORCID: [0000-0001-9523-3808](https://orcid.org/0000-0001-9523-3808)
+ISEL · Rua Conselheiro Emídio Navarro 1, 1959-007 Lisboa, Portugal · `jose.madeira (at) isel.pt`
+IDMEC · Av. Rovisco Pais 1, 1049-001 Lisboa, Portugal · `aguilarmadeira (at) tecnico.ulisboa.pt`

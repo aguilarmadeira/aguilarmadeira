@@ -54,6 +54,12 @@ Open, self-contained MATLAB test problems for benchmarking derivative-free solve
 
 ---
 
+## Teaching
+
+- [`optimization-course`](https://github.com/aguilarmadeira/optimization-course) — lecture notes and code for the **Optimization** course at ISEL: slides in Portuguese and English (PDF), MATLAB and Python code that reproduces every example on the slides, and Google Colab notebooks. Covers univariate and multivariate methods, constrained optimization, global optimization (GLODS, simulated annealing, genetic algorithms) and multiobjective optimization (DMS, NSGA-II).
+
+---
+
 ## Research Interests
 
 Derivative-free optimization · Multiobjective optimization · Direct-search methods · Decision Sciences and operations research · Industrial applications in transit operations, vehicle routing, postal logistics and energy systems

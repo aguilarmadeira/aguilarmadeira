@@ -57,7 +57,7 @@ Open, self-contained MATLAB test problems for benchmarking derivative-free solve
 ## Teaching
 
 - [`optimization-course`](https://github.com/aguilarmadeira/optimization-course) — lecture notes and code for the **Optimization** course at ISEL: slides in Portuguese and English (PDF), MATLAB and Python code that reproduces every example on the slides, and Google Colab notebooks. Covers univariate and multivariate methods, constrained optimization, global optimization (GLODS, simulated annealing, genetic algorithms) and multiobjective optimization (DMS, NSGA-II).
-
+- [`linear-algebra-course`](https://github.com/aguilarmadeira/linear-algebra-course) — slides, exercise sheets and code for the **Linear Algebra** course at ISEL: slides and exercise sheets in Portuguese and English (PDF), with solutions released during the semester, and short Python/MATLAB examples with Google Colab notebooks. Covers complex numbers, vector spaces, matrices and linear systems, determinants, inner product and geometry in ℝ³, and eigenvalues and diagonalization.
 ---
 
 ## Research Interests

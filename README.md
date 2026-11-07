@@ -29,28 +29,28 @@ A two-part contribution on mixed-variable optimisation, in which the structural 
 
 - [`GLODS_SI`](https://github.com/aguilarmadeira/GLODS_SI) — implementation and reproducibility artefacts for GLODS-SI
 - [`MOO_Prob_Matlab`](https://github.com/aguilarmadeira/MOO_Prob_Matlab) — multiobjective benchmark test problems over continuous and mixed-variable decision spaces under controlled scale heterogeneity · DOI [10.5281/zenodo.20783713](https://doi.org/10.5281/zenodo.20783713)
-- [`DFO_Benchmark_Suite`](https://github.com/aguilarmadeira/DFO_Benchmark_Suite) — single-objective derivative-free benchmark over continuous and mixed-variable decision spaces under controlled scale heterogeneity · DOI [10.5281/zenodo.20782892](https://doi.org/10.5281/zenodo.20782892)
+- [`DFO_Benchmark_Suite`](https://github.com/aguilarmadeira/DFO_Benchmark_Suite) — solver-independent benchmark for derivative-free and mixed-variable black-box optimization: continuous, discrete and categorical problems with known global optima · v2.0.0 DOI [10.5281/zenodo.24037856](https://doi.org/10.5281/zenodo.24037856) · all versions DOI [10.5281/zenodo.20782892](https://doi.org/10.5281/zenodo.20782892)
 - [`mixed-spaces-supplementary`](https://github.com/aguilarmadeira/mixed-spaces-supplementary) — supplementary code for a manuscript on mixed-variable optimisation as a metric product space
 
 ---
 
 ## Benchmark test-problem collections
 
-Open, self-contained MATLAB test problems for benchmarking derivative-free solvers under controlled **scale heterogeneity**, across single- and multi-objective settings and continuous / mixed-variable decision spaces. Each collection instantiates its base problems under **8 deterministic heterogeneity strategies**.
+Open, self-contained MATLAB test problems for benchmarking derivative-free solvers, across single- and multi-objective settings and continuous, discrete, categorical and mixed-variable decision spaces.
 
-| Setting | Variables | Base problems | Instances (× 8 strategies) | Repository |
+| Setting | Variables | Base problems | Instances | Repository |
 | --- | --- | --- | --- | --- |
-| Single-objective | Continuous | 63 | 504 | [`DFO_Benchmark_Suite`](https://github.com/aguilarmadeira/DFO_Benchmark_Suite) |
-| Single-objective | Mixed (C/D/K) | 63 | 504 | [`DFO_Benchmark_Suite`](https://github.com/aguilarmadeira/DFO_Benchmark_Suite) |
-| Multi-objective | Continuous | 108 | 864 | [`MOO_Prob_Matlab`](https://github.com/aguilarmadeira/MOO_Prob_Matlab) |
-| Multi-objective | Mixed (C/D/K) | 108 | 864 | [`MOO_Prob_Matlab`](https://github.com/aguilarmadeira/MOO_Prob_Matlab) |
+| Single-objective (v2.0.0) | C, D, K and mixed (7 type patterns), known global optima | 55 + Family BK | 841 | [`DFO_Benchmark_Suite`](https://github.com/aguilarmadeira/DFO_Benchmark_Suite) |
+| Single-objective (v1.0.0) | Continuous / Mixed (C/D/K), 8 heterogeneity strategies | 63 | 504 + 504 | [`DFO_Benchmark_Suite` @ v1.0.0](https://github.com/aguilarmadeira/DFO_Benchmark_Suite/tree/v1.0.0) |
+| Multi-objective | Continuous | 108 | 864 (× 8 strategies) | [`MOO_Prob_Matlab`](https://github.com/aguilarmadeira/MOO_Prob_Matlab) |
+| Multi-objective | Mixed (C/D/K) | 108 | 864 (× 8 strategies) | [`MOO_Prob_Matlab`](https://github.com/aguilarmadeira/MOO_Prob_Matlab) |
 | Multi-objective — base set¹ | Continuous | 108 | — (unscaled) | [`MOO_Prob_Matlab`](https://github.com/aguilarmadeira/MOO_Prob_Matlab) |
 
-<sub>The eight strategy families are shared across all collections. The `sobol_digit_oscillatory` contrast is κ = 1e8 in the single-objective suite and κ = 1e6 in the multi-objective suite, matching the settings used in the respective studies.</sub>
+<sub>The eight heterogeneity strategies are shared by `DFO_Benchmark_Suite` v1.0.0 and `MOO_Prob_Matlab`. The `sobol_digit_oscillatory` contrast is κ = 1e8 in the single-objective suite and κ = 1e6 in the multi-objective suite, matching the settings used in the respective studies.</sub>
 
 <sub>¹ Base set: MATLAB conversions of the original Direct MultiSearch (DMS) problems, originally distributed in AMPL — the reference set (`problems/`) from which the multi-objective collections above are derived.</sub>
 
-<sub>Archived and citable on Zenodo — `DFO_Benchmark_Suite`: DOI [10.5281/zenodo.20782892](https://doi.org/10.5281/zenodo.20782892) · `MOO_Prob_Matlab`: DOI [10.5281/zenodo.20783713](https://doi.org/10.5281/zenodo.20783713).</sub>
+<sub>Archived and citable on Zenodo — `DFO_Benchmark_Suite`: v2.0.0 DOI [10.5281/zenodo.24037856](https://doi.org/10.5281/zenodo.24037856), v1.0.0 DOI [10.5281/zenodo.20782893](https://doi.org/10.5281/zenodo.20782893), all versions DOI [10.5281/zenodo.20782892](https://doi.org/10.5281/zenodo.20782892) · `MOO_Prob_Matlab`: DOI [10.5281/zenodo.20783713](https://doi.org/10.5281/zenodo.20783713).</sub>
 
 ---
 

@@ -36,11 +36,11 @@ A two-part contribution on mixed-variable optimisation, in which the structural 
 
 ## Benchmark test-problem collections
 
-Open, self-contained MATLAB test problems for benchmarking derivative-free solvers, across single- and multi-objective settings and continuous, discrete, categorical and mixed-variable decision spaces.
+Open, self-contained MATLAB test problems for benchmarking derivative-free solvers, across single- and multi-objective settings and continuous, discrete, categorical and mixed-variable decision spaces. `DFO_Benchmark_Suite` v2.0.0 instantiates the same base problems in **all seven combinations of the three variable types** — continuous (C), ordered discrete (D) and categorical (K) — so that the effect of each type, and of their combination, can be compared on identical base problems with known global optima.
 
 | Setting | Variables | Base problems | Instances | Repository |
 | --- | --- | --- | --- | --- |
-| Single-objective (v2.0.0) | C, D, K and mixed (7 type patterns), known global optima | 55 + Family BK | 841 | [`DFO_Benchmark_Suite`](https://github.com/aguilarmadeira/DFO_Benchmark_Suite) |
+| Single-objective (v2.0.0) | C, D, K, DK, CD, CK, CDK (7 type patterns²), known global optima | 55 + Family BK | 841 | [`DFO_Benchmark_Suite`](https://github.com/aguilarmadeira/DFO_Benchmark_Suite) |
 | Single-objective (v1.0.0) | Continuous / Mixed (C/D/K), 8 heterogeneity strategies | 63 | 504 + 504 | [`DFO_Benchmark_Suite` @ v1.0.0](https://github.com/aguilarmadeira/DFO_Benchmark_Suite/tree/v1.0.0) |
 | Multi-objective | Continuous | 108 | 864 (× 8 strategies) | [`MOO_Prob_Matlab`](https://github.com/aguilarmadeira/MOO_Prob_Matlab) |
 | Multi-objective | Mixed (C/D/K) | 108 | 864 (× 8 strategies) | [`MOO_Prob_Matlab`](https://github.com/aguilarmadeira/MOO_Prob_Matlab) |
@@ -49,6 +49,8 @@ Open, self-contained MATLAB test problems for benchmarking derivative-free solve
 <sub>The eight heterogeneity strategies are shared by `DFO_Benchmark_Suite` v1.0.0 and `MOO_Prob_Matlab`. The `sobol_digit_oscillatory` contrast is κ = 1e8 in the single-objective suite and κ = 1e6 in the multi-objective suite, matching the settings used in the respective studies.</sub>
 
 <sub>¹ Base set: MATLAB conversions of the original Direct MultiSearch (DMS) problems, originally distributed in AMPL — the reference set (`problems/`) from which the multi-objective collections above are derived.</sub>
+
+<sub>² Variable-type patterns of `DFO_Benchmark_Suite` v2.0.0: all continuous (C), all ordered discrete (D), all categorical (K), and the mixed combinations DK, CD, CK and CDK, built from 55 classical base instances; continuous coordinates under three scale strategies (baseline, moderate, extreme) where they change the problem; plus Family BK, synthetic problems with nominal categories and a controlled continuous–categorical interaction. Every instance has a known, justified global optimum.</sub>
 
 <sub>Archived and citable on Zenodo — `DFO_Benchmark_Suite`: v2.0.0 DOI [10.5281/zenodo.24037856](https://doi.org/10.5281/zenodo.24037856), v1.0.0 DOI [10.5281/zenodo.20782893](https://doi.org/10.5281/zenodo.20782893), all versions DOI [10.5281/zenodo.20782892](https://doi.org/10.5281/zenodo.20782892) · `MOO_Prob_Matlab`: DOI [10.5281/zenodo.20783713](https://doi.org/10.5281/zenodo.20783713).</sub>
 

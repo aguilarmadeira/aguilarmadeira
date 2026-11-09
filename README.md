@@ -38,13 +38,13 @@ A two-part contribution on mixed-variable optimisation, in which the structural 
 
 Open, self-contained test problems for benchmarking derivative-free solvers, across single- and multi-objective settings and continuous, discrete, categorical and mixed-variable decision spaces. `DFO_Benchmark_Suite` v2.1.2 instantiates the same base problems in **all seven combinations of the three variable types** — continuous (C), ordered discrete (D) and categorical (K) — so that the effect of each type, and of their combination, can be compared on identical base problems with known global optima; every problem is a self-contained file in MATLAB/Octave, Python (standard library only) and Julia (Base only), with identical values up to rounding.
 
-| Setting | Variables | Base problems | Instances | Repository |
-| --- | --- | --- | --- | --- |
-| Single-objective (v2.1.2, MATLAB + Python + Julia) | C, D, K, DK, CD, CK, CDK (7 type patterns²), known global optima | 55 + Family BK | 841 | [`DFO_Benchmark_Suite`](https://github.com/aguilarmadeira/DFO_Benchmark_Suite) |
-| Single-objective (v1.0.0) | Continuous / Mixed (C/D/K), 8 heterogeneity strategies | 63 | 504 + 504 | [`DFO_Benchmark_Suite` @ v1.0.0](https://github.com/aguilarmadeira/DFO_Benchmark_Suite/tree/v1.0.0) |
-| Multi-objective | Continuous | 108 | 864 (× 8 strategies) | [`MOO_Prob_Matlab`](https://github.com/aguilarmadeira/MOO_Prob_Matlab) |
-| Multi-objective | Mixed (C/D/K) | 108 | 864 (× 8 strategies) | [`MOO_Prob_Matlab`](https://github.com/aguilarmadeira/MOO_Prob_Matlab) |
-| Multi-objective — base set¹ | Continuous | 108 | — (unscaled) | [`MOO_Prob_Matlab`](https://github.com/aguilarmadeira/MOO_Prob_Matlab) |
+| Setting | Variables | Base problems | Instances | Languages | Repository |
+| --- | --- | --- | --- | --- | --- |
+| Single-objective (v2.1.2) | C, D, K, DK, CD, CK, CDK (7 type patterns²), known global optima | 55 + Family BK | 841 | [MATLAB/Octave](https://github.com/aguilarmadeira/DFO_Benchmark_Suite/tree/main/core) · [Python](https://github.com/aguilarmadeira/DFO_Benchmark_Suite/tree/main/python) · [Julia](https://github.com/aguilarmadeira/DFO_Benchmark_Suite/tree/main/julia) | [`DFO_Benchmark_Suite`](https://github.com/aguilarmadeira/DFO_Benchmark_Suite) |
+| Single-objective (v1.0.0) | Continuous / Mixed (C/D/K), 8 heterogeneity strategies | 63 | 504 + 504 | MATLAB | [`DFO_Benchmark_Suite` @ v1.0.0](https://github.com/aguilarmadeira/DFO_Benchmark_Suite/tree/v1.0.0) |
+| Multi-objective | Continuous | 108 | 864 (× 8 strategies) | MATLAB | [`MOO_Prob_Matlab`](https://github.com/aguilarmadeira/MOO_Prob_Matlab) |
+| Multi-objective | Mixed (C/D/K) | 108 | 864 (× 8 strategies) | MATLAB | [`MOO_Prob_Matlab`](https://github.com/aguilarmadeira/MOO_Prob_Matlab) |
+| Multi-objective — base set¹ | Continuous | 108 | — (unscaled) | MATLAB | [`MOO_Prob_Matlab`](https://github.com/aguilarmadeira/MOO_Prob_Matlab) |
 
 <sub>The eight heterogeneity strategies are shared by `DFO_Benchmark_Suite` v1.0.0 and `MOO_Prob_Matlab`. The `sobol_digit_oscillatory` contrast is κ = 1e8 in the single-objective suite and κ = 1e6 in the multi-objective suite, matching the settings used in the respective studies.</sub>
 
